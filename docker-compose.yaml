@@ -27,6 +27,8 @@
           MYSQL_ROOT_PASSOWRD: password
         networks:
           -wpsite
+        volumes:
+          - phpmyadmin_data:/var/www/html
     #wordpress
         -wordpress:
           depends_on:
