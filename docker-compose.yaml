@@ -34,14 +34,14 @@ services:
         image: wordpress:latest
         ports:
           - '8000:80' #8000 of server to 80 of the container
-          restart: always
+        restart: always
           volumes: 
           - './:/var/www/html'   #webroot of wordpress apache server wordpress files
-          environment:
-            WORDPRESS_DB_HOST: db:3306
-            WORDPRESS_USER: wordpress
-            WORDPRESS_PASSWORD: wordpress
-          networks:
+        environment:
+          WORDPRESS_DB_HOST: db:3306
+          WORDPRESS_USER: wordpress
+          WORDPRESS_PASSWORD: wordpress
+        networks:
             -wpsite
   #mapping volume of db_data(mysql) and wpsite(wordpress)
       networks:
