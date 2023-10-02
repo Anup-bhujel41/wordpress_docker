@@ -14,10 +14,10 @@ services:
       MYSQL_PASSWORD: wordpress
     networks:
       - wpsite
-   
+
   # PHPMyAdmin
-   phpmyadmin:
-     depends_on:
+  phpmyadmin:
+    depends_on:
       - db
     image: phpmyadmin/phpmyadmin
     restart: always
@@ -30,9 +30,6 @@ services:
       - wpsite
     volumes:
       - phpmyadmin_data:/var/www/html
-
-    
-
 
   # WordPress
   wordpress:
@@ -51,7 +48,7 @@ services:
     networks:
       - wpsite
 
-# Mapping volume of db_data (MySQL) and wpsite (WordPress)
+# Mapping volume of db_data (MySQL) and phpmyadmin_data (PHPMyAdmin)
 networks:
   wpsite:
 
