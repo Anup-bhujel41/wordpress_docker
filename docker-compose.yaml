@@ -1,4 +1,5 @@
-version: "3"
+
+  version: "3"
 
 services:
   # Database
@@ -58,3 +59,4 @@ networks:
 volumes:
   db_data:
   phpmyadmin_data:
+
