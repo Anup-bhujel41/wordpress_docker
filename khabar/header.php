@@ -89,7 +89,7 @@
             <div class="col-md-7">
                 <div class="row ">
                     <?php dynamic_sidebar('lup');?>
-                    <?php// get_template_part('home-parts/top-menu');?>
+                    
                 </div>
             </div>
         </div>
